@@ -47,6 +47,18 @@ class FlutterSwiperDemo extends StatelessWidget {
             viewportFraction: 0.7,
             scale: 0.7,
           ),
+        ),
+        Container(
+          height: 200,
+          child: Swiper(
+            itemCount: images.length,
+            itemBuilder: (context, index) {
+              return Image.asset(images[index], fit: BoxFit.fill);
+            },
+            itemWidth: 300,
+            itemHeight: 200,
+            layout: SwiperLayout.TINDER,
+          ),
         )
       ],
     );
